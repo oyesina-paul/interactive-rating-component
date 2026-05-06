@@ -1,0 +1,206 @@
+:root {
+    --clr-primary-500: hsl(25, 97%, 53%);
+
+    --clr-neutral-100: hsl(0, 100%, 100%);
+    --clr-neutral-200: hsl(217, 12%, 63%);
+    --clr-neutral-300:  hsl(213, 19%, 18%);
+    --clr-neutral-400: hsl(216, 12%, 8%);
+
+    --fs-100: 0.9375rem;
+
+    --fw-primary:400;
+    --fw-bold: 700;
+
+    --ff-primary: "Overpass", sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1;
+  text-wrap: balance;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flow-content > * + * {
+  margin-top:  var(--flow-spacer, 1.5rem);
+}  /* Selects every direct child of my flow except the first one */
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-primary);
+    background-color: var(--clr-neutral-400);
+    padding: 1rem;
+}
+
+.rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+@media(min-width:40rem) {
+    .rating {
+        max-width: 20rem;
+        margin: 0 auto;
+    }
+}
+
+.rating-content {
+    background-color: var(--clr-neutral-300);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+.thank-you-content {
+    background-color: var(--clr-neutral-300);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+.thank-you-content.hidden {
+    display: none;
+}
+
+.thank-you-content img {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.thank-you-content > p {
+    margin-top: 1rem;
+}
+
+.selected p{
+    display: inline-flex;
+    color: var(--clr-primary-500);
+    background-color:  hsl(213, 19%, 21%);
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+}
+
+.rating-img {
+    display: inline-flex;
+    background-color: hsl(213, 19%, 21%);
+    padding: 0.7rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.rating-img img {
+    max-width: 75%;
+}
+
+h1 {
+    color: var(--clr-neutral-100);
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--clr-neutral-200);
+    font-size: 0.85rem;
+}
+
+.rating-flex {
+    display: flex;
+   justify-content: space-between;
+}
+
+.rating-num {
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    background-color: hsl(213, 19%, 21%);
+    padding: 1rem;
+    border-radius: 50%;
+    max-height: 2.5rem;
+    border: none;
+}
+
+.rating-num h2 {
+    color: var(--clr-neutral-200);
+    font-size: 1rem;
+}
+
+
+.rating-num:hover {
+    cursor: pointer;
+    background-color: var(--clr-primary-500);
+}
+
+.rating-num h2:hover {
+  color: var(--clr-neutral-400);
+}
+
+.grid-btn {
+    display: grid;
+}
+
+.btn {
+    border: none;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-primary-500);
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.2rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--clr-neutral-100);
+}
+
+span{
+    margin-inline: 0.1rem;
+}
+
